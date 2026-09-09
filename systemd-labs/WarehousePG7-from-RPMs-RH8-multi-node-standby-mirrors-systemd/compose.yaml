@@ -64,6 +64,10 @@ services:
       - edbrepository_secret
     ports:
       - "6453:5432"
+      - "18096:8080"
+      - "18108:8123"
+      - "18102:8081"
+      - "19002:9000"
     volumes:
       - ./data/standby/data:/whpgdata
       - /sys/fs/cgroup:/sys/fs/cgroup:rw
